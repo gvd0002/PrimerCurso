@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE listacursos
+[
+<!ELEMENT listacursos (curso)>
+<!ELEMENT curso (profesor+, alumnos, contenido)>
+<!ATTLIST curso codigo CDATA #FIXED "C1">
+<!ELEMENT profesor (dni, nombre, apellido1, apellido2?)>
+<!ELEMENT alumnos (dni, nombre, apellido1, apellido2)>
+<!ELEMENT contenido (descripcion, horas, creditos)>
+<!ELEMENT dni (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido1 (#PCDATA)>
+<!ELEMENT apellido2 (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT horas (#PCDATA)>
+<!ELEMENT creditos (#PCDATA)>
+]
+>
+<listacursos>
+    <curso codigo="C1">
+      <profesor>
+        <dni>44283093c</dni>
+        <nombre>Luis</nombre>
+        <apellido1>Robles</apellido1>
+        <apellido2>García</apellido2>
+      </profesor>
+      <profesor>
+        <dni>44280000c</dni>
+        <nombre>Lola</nombre>
+        <apellido1>Gómez</apellido1>
+      </profesor>
+      <alumnos>
+        <dni></dni>
+        <nombre></nombre>
+        <apellido1></apellido1>
+        <apellido2></apellido2>
+      </alumnos>
+      <contenido>
+        <descripcion>Diseño Web</descripcion>
+        <horas>50</horas>
+        <creditos>25</creditos>
+      </contenido>
+    </curso>
+</listacursos>

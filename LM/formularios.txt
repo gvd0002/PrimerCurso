@@ -1,0 +1,42 @@
+<form action(fichero php de recepción)="formulario.php" method(como vamos a mandar la info)="post">
+	<imput type(text, password, number, date/time, button) name(nombre del imput) id size value(por defecto lo que te pone) radio checkbox> tabindex="n" va por orden en tabulaciones para moverse
+
+	<textarea (imput más grande) name cols rows> se le puede decir cuantas filas y columnas. se le puede poner atributo readonly </textarea>
+
+	<select>
+		<option> </option>
+	</select>
+
+	<button> </button>
+
+	<fieldset> te hace una cajita en el bloque
+		<legend> Pone el titulito a la caja
+
+	<imput type="image" src="ruta de la foto" id name> se comporta como un botón la foto
+
+	para escribir el apartado de los imput, si uso label, pongo un atributo for que luego será el id de un imput para relacionarlos: ejemplo:
+	<label for="nombre" accesskey="N"> Nombre: &nbsp(mete un espacio)</label> (accesskey hace que con Alt y esa letra vaya a la caja)
+	<imput type="text" id="nombre" name="nnombre" disabled(no deja escribir)>
+	
+	un radio te pone puntitos para marcar una opción. se le pomdrá un mismo nombre a las opciones para enviar una sola respuesta y que se desmarque la otra. La opción checked="checked" o solo checked te pone por defecto ese valor.
+
+	checkbox son cajitas para marcar multiopciones. distintos name para mandar múltiples datos.
+	
+	
+	los select con option normales te dejan x opciones. pero se pueden agrupar por subgrupos de esta forma:
+	<optgroup label="Madrid">
+		<option>Madrid </option>
+		<option>At.Madrid </option>
+	</optgroup>
+
+
+	<input type="submit" value="enviar"> value te va a poner ese texto en el boton
+	es igual que
+	<button name="envio" type="submit" value"enviar">Enviar</button> lo que pongas entre las etiquetas va a ser el botón
+
+	<input type="reset" value="resetear">
+	<botton name="res" type="reset">Resetear</button>
+	
+	
+	
+</form>

@@ -1,0 +1,15 @@
+<table>
+	<caption> </caption> Pone el titulo de la tabla
+	<tr> abre una fila
+		<td> </td>
+		Sucesivamente pone celdas
+	</tr>
+	<tr> abre otra fila
+		<th> </th> Abre una celda con énfasis
+	</tr>
+
+También puedo dividir una tabla en partes con distinto formato poniendo dentro las filas con celdas
+	<thead>
+	<tbody>
+	<tfoot>
+<table

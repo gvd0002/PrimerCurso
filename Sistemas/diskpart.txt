@@ -1,0 +1,17 @@
+<2echo off
+REM ATTRIBUTES DISK SET READONLY establece el atributo del disco seleccionado como solo lectura
+
+REM Selecciono el disco 1
+SELECT DISK 1
+
+REM asigno solo lectura al disco seleccionado
+ATTRIBUTES DISK SET READONLY
+
+REM miro los volúmenes que tengo 
+list volumen
+
+REM selecciono volumen
+select volumen 3
+
+REM elimino la letra
+remove letter=D

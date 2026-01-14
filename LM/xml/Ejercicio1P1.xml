@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Primero la raíz es catalogo que incluye las distintas series que añadamos-->
+<catalogo nombre="Gonzalo">
+<!--Primera serie-->
+<!--He puesto atributos que considero posibles campos de busqueda-->
+  <serie titulo="Dark" genero="Sci-fi" plataforma="Netflix">
+    <año>2017</año>
+    <estado>Finalizada</estado>
+    <temporadas>3</temporadas>
+    <!--Creo una etiqueta de nombre para cada creador-->
+    <creadores>
+      <nombre>Baran bo Odar</nombre>
+      <nombre>Jantje Friese</nombre>
+    </creadores>
+    <!--Dentro del reparto encontramos actores con nombres como etiqueta-->
+    <reparto>
+      <actores>
+      <nombre>Louis Hofmann</nombre>
+      <nombre>Lisa Vicarey</nombre>
+      </actores>
+    </reparto>
+  </serie>
+  <serie titulo="The Bear" genero="Drama" plataforma="Hulu">
+    <año>2022</año>
+    <estado>En emision</estado>
+    <temporadas>3</temporadas>
+    <creadores>
+     <nombre> Christopher Storer</nombre>
+    </creadores>
+    <reparto>
+      <actores>
+      <nombre>Jeremy Allen White</nombre>
+      <nombre>Ayo Edebiri</nombre>
+      </actores>
+    </reparto>
+  </serie>
+  <serie titulo="La casa de papel" genero="Thriller" plataforma="Netflix">
+    <año>2017</año>
+    <estado>Finalizada</estado>
+    <temporadas>5</temporadas>
+    <creadores>Alex Pina</creadores>
+    <reparto>
+      <actores>
+      <nombre>Ursula Corbero</nombre>
+      <nombre>Alvaro Monte</nombre>
+      </actores>
+    </reparto>
+  </serie>
+</catalogo>

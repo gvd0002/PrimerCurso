@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE inventario
+[
+<!ELEMENT inventario (programa+)>
+<!ELEMENT programa (titulo,(ingles|espanol), precio, categoria, descripcion, departamento+, web?, caratula?)>
+<!ATTLIST programa codigo CDATA #REQUIRED>
+<!ATTLIST programa version CDATA #REQUIRED>
+<!ATTLIST programa anioAdquisicion CDATA #IMPLIED>
+<!ATTLIST programa sistemaOperativo (Windows|MacOs) "Windows">
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT ingles EMPTY>
+<!ELEMENT espanol EMPTY>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT categoria  (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT departamento  (#PCDATA)>
+<!ELEMENT web (#PCDATA)>
+<!ELEMENT caratula  (#PCDATA)>
+
+]
+>
+
+
+<inventario>
+  <programa codigo="1" version="1.0" anioAdquisicion="2010" sistemaOperativo="Windows">
+    <titulo>PRIMERO</titulo>
+    <espanol/>
+    <precio>20€</precio>
+    <categoria>Categoria 1</categoria>
+    <descripcion>Yo que se</descripcion>
+    <departamento>Yo que se</departamento>
+    <departamento>Yo que se</departamento>
+    <web>Yo que se</web>
+    <caratula>Yo que se</caratula>
+  </programa>
+  <programa codigo="2" version="1.1" anioAdquisicion="2013" >
+    <titulo>SEGUNDO</titulo>
+    <espanol/>
+    <precio>40€</precio>
+    <categoria>Categoria 2</categoria>
+    <descripcion>Yo que se</descripcion>
+    <departamento>Yo que se</departamento>
+    <caratula>Yo que se</caratula>
+  </programa>
+  <programa codigo="3" version="1.2">
+    <titulo>TERCERO</titulo>
+    <ingles/>
+    <precio>30€</precio>
+    <categoria>Categoria 3</categoria>
+    <descripcion>Yo que se</descripcion>
+    <departamento>Yo que se</departamento>
+    <departamento>Yo que se</departamento>
+    <departamento></departamento>
+    <web>Yo que se</web>
+  </programa>
+  <programa codigo="4" version="1.3" anioAdquisicion="2024" sistemaOperativo="MacOs">
+    <titulo>CUARTO</titulo>
+    <ingles/>
+    <precio>50€</precio>
+    <categoria>Categoria 4</categoria>
+    <descripcion>Yo que se</descripcion>
+    <departamento>Yo que se</departamento>
+    <departamento>Yo que se</departamento>
+  </programa>
+</inventario>

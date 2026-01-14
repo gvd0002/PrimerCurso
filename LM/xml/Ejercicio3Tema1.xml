@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<elecciones>
+  <partido>
+     <nombre>Partido Popular</nombre>
+     <siglas>PP</siglas>
+     <votos>100.000</votos>
+     <escaños>10</escaños>
+     <candidatos>
+      <nombre>Pedro Sanchez</nombre>
+      <posicion>10</posicion>
+    </candidatos>
+  </partido>
+  <partido>
+     <nombre>Partido Socialista Obrero Español</nombre>
+     <siglas>PSOE</siglas>
+     <votos>100.000</votos>
+     <escaños>10</escaños>
+     <candidatos>
+      <nombre>Feijoo</nombre>
+      <posicion>9</posicion>
+    </candidatos>
+  </partido>
+  <partido>
+     <nombre>Izquierda Unida</nombre>
+     <siglas>IU</siglas>
+     <votos>100.000</votos>
+     <escaños>10</escaños>
+     <candidatos>
+      <nombre>Isabel</nombre>
+      <posicion>8</posicion>
+    </candidatos>
+  </partido>
+  <partido>
+     <nombre>Payasos Justicieros</nombre>
+     <siglas>PJ</siglas>
+     <votos>100.000</votos>
+     <escaños>10</escaños>
+     <candidatos>
+      <nombre>Antoio Recio</nombre>
+      <posicion>1</posicion>
+    </candidatos>
+  </partido>
+  <partido>
+     <nombre>Partido Andaluz</nombre>
+     <siglas>PA</siglas>
+     <votos>100.000</votos>
+     <escaños>10</escaños>
+     <candidatos>
+      <nombre>Jose</nombre>
+      <posicion>2</posicion>
+    </candidatos>
+  </partido>
+</elecciones>

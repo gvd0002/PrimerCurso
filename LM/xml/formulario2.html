@@ -1,0 +1,116 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Mi página </title>
+        <link rel="stylesheet" type="text/css" href="mi.css">
+        <style>
+            table{
+                width: 100%;
+            }
+        </style>
+        <script scr="mi.js"></script>
+    </head>
+    <div>
+        <div>
+            <img id="cabecera" src="cabecera.png"alt="cabecera" width="500">
+        </div>
+
+        <h3>MATRICULA</h3>
+
+        <fieldset>
+            <label for="NMatricula"><b>Nº de Matrícula*</b></label>
+            <input type="number" id="nmatricula" name="nnmatricula" tabindex="1">
+            <label for="curso"><b>Curso</b></label>
+            <input type="number" id="curso" name="ccurso" tabindex="2">
+        </fieldset>
+
+        <h3>DATOS FAMILIARES</h3>
+
+        <fieldset>
+            <table>
+                <tr>
+                    <td><b>Nombre</b></td>
+                    <td colspan="2"><input type="text" id="nombre" name="nnombre" tabindex="1"></td>
+                    <td><b>Apellidos</b></td>
+                    <td colspan="2"><input type="text" id="apellidos" name="aapellidos" tabindex="2"></td>
+                </tr>
+                <tr>
+                    <td><b>F.Nacimiento</b></td>
+                    <td><input type="date" id="fecha" name="ffecha" tabindex="3"></td>
+                    <td><b>Edad</b></td>
+                    <td><input type="number" id="edad" name="eedad" tabindex="4"></td>
+                    <td><b>DNI</b></td>
+                    <td><input type="text" id="dni" name="ddni" tabindex="5"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <h3>DATOS FALIMIARES</h3>
+
+        <fieldset>
+            <table>
+                <tr>
+                    <td colspan="2"><b>Nombre del padre</b></td>
+                    <td colspan="2"><input type="text" id="nompadre" name="nnompadre" size="40" tabindex="6"></td>
+                    <td>DNI</td>
+                    <td><input type="text" id="dniP" name="ddniP" tabindex="7"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Nombre de la madre</b></td>
+                    <td colspan="2"><input type="text" id="nommadre" name="nnommadre" size="40" tabindex="8"></td>
+                    <td>DNI</td>
+                    <td><input type="text" id="dniM" name="ddniM" tabindex="9"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Domicilio</b></td>
+                    <td colspan="4"><input type="text" id="direccion" name="ddireccion" size="70" tabindex="10"></td>
+                </tr>
+                <tr>
+                    <td><b>Poblacion</b></td>
+                    <td><input type="text" id="poblacion" name="ppoblacion" tabindex="11"></td>
+                    <td><b>Provincia</b></td>
+                    <td><input type="tex" id="provincia" name="pprovincia" tabindex="12"></td>
+                    <td><b>C.P.</b></td>
+                    <td><input type="number" id="cp" name="ccp" tabindex="13"></td>
+                </tr>
+                <tr>
+                    <td><b>Teléfonos</b></td>
+                    <td><input type="number" id="tel1" name="ttel1" tabindex="14"></td>
+                    <td><input type="number" id="tel2" name="ttel2" tabindex="15"></td>
+                    <td><b>e-mail</b></td>
+                    <td colspan="2"><input type="text" id="email" name="eemail" tabindex="16"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <h3>Actividad en la que solicita matrícula</h3>
+
+        <fieldset>
+            <table>
+                <tr>
+                    <td><input type="checkbox" id="TI" name="TI"><b>Taller de Inglés</b></td>
+                    <td><input type="checkbox" id="TF" name="TF"><b>Taller de Fotografía</b></td>
+                    <td><input type="checkbox" id="EMP" name="EMP"><b>Escuela Municipal de Pintura</b></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="DO" name="DO"><b>Danza Oriental</b></td>
+                    <td><input type="checkbox" id="EMT" name="EMT"><b>Escuela Municipal de Teatro</b></td>
+                    <td><input type="checkbox" id="L" name="L"><b>Liliana</b></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="CA" name="CA"><b>Clases de Apoyo</b></td>
+                    <td><input type="checkbox" id="DU" name="DU"><b>Danza Urbana</b></td>
+                    <td><input type="checkbox" id="VB" name="VB"><b>Virtu Barros</b></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <h3>Otros datos**</h3>
+
+        <fieldset>
+            <textarea id="infoextra" name="iinforextra" cols="100"></textarea>
+        </fieldset>
+    </div>
+
+</hmtl>

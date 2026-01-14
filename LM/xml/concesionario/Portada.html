@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Mi página </title>
+        <link rel="stylesheet" type="text/css" href="mi.css">
+        <style>
+        </style>
+        <script scr="mi.js"></script>
+    </head>
+    <header>
+        <img id="banner" src="banner.png" alt="Banner">
+        <h1>Concesionario GonzaProRace</h1>
+        <form action="formulario.php" method="post">
+            <label for="nombre" accesskey="N">Nombre: &nbsp;</b></label>
+            <input type="text" id="nombre" name="nnombre" placeholder="Introduzca Nombre" tabindex="1">
+            <br>
+            <label for="password" acceskey="P">Contraseña: &nbsp;</label>
+            <input type="password" id="password" name="password" placeholder="Introduzca Contraseña" tabindex="2">
+            <br>
+            <input type="reset" value="Reestablecer">
+            <input type="submit" value="Enviar">
+        </form>
+    </header>
+    <main>
+        <section id="presentacion">
+            <h1>Concesionario Yamaha GonzaProRace</h1>
+            <p>Yamaha es una marca reconocida mundialmente por su innovación, calidad y 
+                pasión por el mundo del motor. Desde sus inicios, ha destacado por crear 
+                motocicletas que combinan diseño, tecnología de vanguardia y un rendimiento
+                excepcional. Su compromiso con la experiencia del conductor se refleja en 
+                cada modelo, pensado para ofrecer seguridad, comodidad y potencia. Explorar
+                el universo Yamaha es adentrarse en un estilo de vida donde la libertad y 
+                la emoción se encuentran en cada kilómetro. Bienvenido a nuestro concesionario,
+                donde podrás descubrir lo mejor de la ingeniería japonesa.</p>
+            <img id="fotoportada1" src="fotoportada1.png" alt="Foto Portada 1">
+            <img id="fotoportada2" src="fotoportada2.png" alt="Foto Portada 2">
+            <img id="fotoportada3" src="fotoportada3.png" alt="Foto Portada 3">
+
+        </section>
+        
+        <aside id="menuLateral1">
+            <p>Tipos de motos</p>
+            <details>
+                <summary id="naked">Motos Naked</summary>
+                <ul>
+                    <li><a href="#125" target="_self">MT-125</a></li>
+                    <li><a href="#03" target="_self">MT-03</a></li>
+                    <li><a href="#07" target="_self">MT-07</a></li>
+                    <li><a href="#09" target="_self">MT-09</a></li>
+                </ul>
+            </details>
+            <details>
+                <summary id="sport">Motos Sport</summary>
+                <ul>
+                    <li><a href="#r125" target="_self">R125</a></li>
+                    <li><a href="#r3" target="_self">R3</a></li>
+                    <li><a href="#r7" target="_self">R7</a></li>
+                    <li><a href="#r9" target="_self">R9</a></li>
+                </ul>
+            </details>
+            
+        </aside>
+        <aside id="menuLateral2">
+            <p>Ofertas</p>
+            <ul>
+                <li><a href="#oferta1" target="_self">Oferta 1</a></li>
+                <li><a href="#oferta2" target="_self">Oferta 2</a></li>
+            </ul>
+        </aside>
+        <footer>
+            <a href="#infocompañia" target="_self">Información de la compañía</a>
+            <a href="lugar" target="_self">Donde estamos</a>
+            <p>Email: info@gonzaprorace.com</p>
+            <p>@copyright</p>
+        </footer>
+    </main>
+</html>

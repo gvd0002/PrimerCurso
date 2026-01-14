@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="COMUNIDAD">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="edificio" minOccurs="1" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="plantas" type="xs:integer"/>
+						<xs:element name="pisos" type="xs:integer"/>
+						<xs:element name="propietarios" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="nombre" type="xs:string"/>
+									<xs:element name="apellidos" type="xs:string"/>
+									<xs:element name="dni" type="xs:string"/>
+									<xs:element name="propiedad" type="xs:string" minOccurs="0"/>
+									<xs:element name="viviendo" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="número" type="xs:integer" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="calle" type="xs:string" use="required"/>
+	</xs:complexType>
+</xs:element>
+</xs:schema>

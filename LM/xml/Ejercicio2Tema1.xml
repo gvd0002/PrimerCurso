@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<concesionario>
+  <coche>
+    <marca>Audi</marca>
+    <modelo>RS3</modelo>
+    <año>2024</año>
+    <precio>85.000</precio>
+    <vendedor>
+      <nombre>Juan</nombre>
+      <telefono>638 372 958</telefono>
+    </vendedor>
+  </coche>
+  <coche>
+    <marca>Mercedes</marca>
+    <modelo>C200</modelo>
+    <año>2010</año>
+    <precio>15000</precio>
+    <vendedor>
+      <nombre>Sergio</nombre>
+      <telefono>628 538 149</telefono>
+    </vendedor>
+  </coche>
+  <coche>
+    <marca>BMW</marca>
+    <modelo>Serie1</modelo>
+    <año>2020</año>
+    <precio>20.000</precio>
+    <vendedor>
+      <nombre>Juan</nombre>
+      <telefono>638 372 958</telefono>
+    </vendedor>
+  </coche>
+  <coche>
+    <marca>Peugeot</marca>
+    <modelo>206</modelo>
+    <año>2005</año>
+    <precio>1.000</precio>
+    <vendedor>
+      <nombre>Juan</nombre>
+      <telefono>638 372 958</telefono>
+    </vendedor>
+  </coche>
+  <marca>Ford</marca>
+    <modelo>Fiesta</modelo>
+    <año>2000</año>
+    <precio>1.000</precio>
+    <vendedor>
+      <nombre>Sergio</nombre>
+      <telefono>628 538 149</telefono>
+    </vendedor>
+  </coche>
+</concesionario>

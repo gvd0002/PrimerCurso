@@ -1,0 +1,14 @@
+@echo off
+
+REM seleciono disco
+select disk 1
+
+REM Quito la lectura solo
+attributes disk clear readonly
+
+REM selecciono el volumen y asigno letra
+
+select volumen 3
+assign letter=D
+
+exit

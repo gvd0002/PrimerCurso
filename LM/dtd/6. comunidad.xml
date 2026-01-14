@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE COMUNIDAD
+[
+<!ELEMENT COMUNIDAD (edificio+)>
+<!ELEMENT edificio (plantas, pisos, propietarios+)>
+<!ELEMENT plantas (#PCDATA)>
+<!ELEMENT pisos (#PCDATA)>
+<!ELEMENT propietarios (nombre, apellidos, dni, propiedad?, viviendo?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT dni (#PCDATA)>
+<!ELEMENT propiedad (#PCDATA)>
+<!ELEMENT viviendo EMPTY>
+<!ATTLIST COMUNIDAD calle CDATA #REQUIRED>
+<!ATTLIST edificio número CDATA #REQUIRED>
+<!ENTITY entidad "casa">
+
+]
+>
+<COMUNIDAD calle="Trajano">
+	<edificio número="1">
+	   <plantas>5</plantas>
+	   <pisos>9</pisos>
+	   <propietarios>
+	   	<nombre>Luis</nombre>
+	   	<apellidos>Robles</apellidos>
+	   	<dni>12345678A</dni>
+	   	<propiedad>5C y es una &entidad; </propiedad>   
+	   </propietarios>
+	   <propietarios>
+	   	<nombre>Juan</nombre>
+	   	<apellidos>Sánchez</apellidos>
+	   	<dni>12345678B</dni> 
+	   </propietarios>
+	</edificio>   
+	<edificio número="2">
+	   <plantas>8</plantas>
+	   <pisos>10</pisos>
+	   <propietarios>
+	   	<nombre>Antonio</nombre>
+	   	<apellidos>Cámara</apellidos>
+	   	<dni>12345678C</dni>
+	   	<propiedad>Propietario del piso 5ºC &lt;Esto es un comentario para ver como poner mayor y menor&gt;</propiedad>   
+	   	<viviendo/>
+	   </propietarios>
+	   <propietarios>
+	   	<nombre>Iván</nombre>
+	   	<apellidos>Cano</apellidos>
+	   	<dni>12345678D</dni>
+	   	<propiedad>Propietario del piso 2ºC</propiedad>   
+	   </propietarios>
+	</edificio>  
+</COMUNIDAD>

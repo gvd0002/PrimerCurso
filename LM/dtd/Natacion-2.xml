@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--************************************************************************************************************************-->
+<!--Debéis validar este documento atendiendo a las características del XML-->
+<!--************************************************************************************************************************-->
+<!--Realizar DTD interno aquí-->
+<!DOCTYPE ClubNatacion
+[
+<!ELEMENT ClubNatacion (Entrenadores, Nadadores, Pruebas, Competiciones, Marcas)>
+<!ELEMENT Entrenadores (Entrenador+)>
+<!ELEMENT Entrenador (Nombre)>
+<!ELEMENT Nombre (#PCDATA)>
+<!ELEMENT Nadadores (Nadador+)>
+<!ELEMENT Nadador (Nombre, Categoria)>
+<!ELEMENT Categoria (#PCDATA)>
+<!ELEMENT Pruebas (Prueba+)>
+<!ELEMENT Prueba (Descripcion)>
+<!ELEMENT Descripcion (#PCDATA)>
+<!ELEMENT Competiciones (Competicion+)>
+<!ELEMENT Competicion (Nombre, Fecha)>
+<!ELEMENT Fecha (#PCDATA)>
+<!ELEMENT Marcas (Marca+)>
+<!ELEMENT Marca (#PCDATA)>
+<!ATTLIST Entrenador id CDATA #REQUIRED>
+<!ATTLIST Nadador id CDATA #REQUIRED>
+<!ATTLIST Nadador sexo CDATA #REQUIRED>
+<!ATTLIST Nadador entrenador_ref CDATA #REQUIRED>
+<!ATTLIST Prueba id CDATA #REQUIRED>
+<!ATTLIST Prueba estilo CDATA #REQUIRED>
+<!ATTLIST Competicion id CDATA #REQUIRED>
+<!ATTLIST Marca id CDATA #REQUIRED>
+<!ATTLIST Marca nadador_ref CDATA #REQUIRED>
+<!ATTLIST Marca prueba_ref CDATA #REQUIRED>
+<!ATTLIST Marca competicion_ref CDATA #REQUIRED>
+<!ATTLIST Marca tiempo CDATA #REQUIRED>
+]
+>
+
+<ClubNatacion>
+  <Entrenadores>
+    <Entrenador id="E1">
+      <Nombre>Marta Fernández</Nombre>
+    </Entrenador>
+    <Entrenador id="E2">
+      <Nombre>Diego Martín</Nombre>
+    </Entrenador>
+  </Entrenadores>
+
+  <Nadadores>
+    <Nadador id="N1" sexo="M" entrenador_ref="E1">
+      <Nombre>Javier Gallardo Manzano</Nombre>
+      <Categoria>alevin</Categoria>
+    </Nadador>
+    <Nadador id="N2" sexo="M" entrenador_ref="E1">
+      <Nombre>Ernesto Robles Cámara</Nombre>
+      <Categoria>alevin</Categoria>
+    </Nadador>
+  </Nadadores>
+
+  <Pruebas>
+    <Prueba id="P1" estilo="estilos">
+      <Descripcion>200 Estilos</Descripcion>
+    </Prueba>
+    <Prueba id="P2" estilo="libre">
+      <Descripcion>200 Libre</Descripcion>
+    </Prueba>
+  </Pruebas>
+
+  <Competiciones>
+    <Competicion id="C1">
+      <Nombre>Fase Provincial Motril</Nombre>
+      <Fecha>2025-11-28</Fecha>
+    </Competicion>
+  </Competiciones>
+
+  <Marcas>
+    <Marca id="M1" nadador_ref="N1" prueba_ref="P1" competicion_ref="C1" tiempo="02:58.34"/>
+    <Marca id="M2" nadador_ref="N2" prueba_ref="P2" competicion_ref="C1" tiempo="02:45.32"/>
+  </Marcas>
+</ClubNatacion>

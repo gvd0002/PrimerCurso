@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<agenda>
+  <contacto>
+    <nombre> Gonzalo</nombre> 
+    <apellidos> Viedma Díaz</apellidos> 
+    <correo>  gonzaloviedma@gmail.com</correo>
+    <telefonos>
+      <movil> 612 345 678</movil>
+      <fijo></fijo>
+      <trabajo></trabajo>
+      </telefonos>
+  </contacto>
+  <contacto>
+  <nombre> Paco</nombre> 
+    <apellidos> Fernández  Fernández</apellidos> 
+    <correo>  pacofernandez@gmail.com</correo>
+    <telefonos>
+      <movil></movil>
+      <fijo>698 765 432</fijo>
+      <trabajo></trabajo>
+      </telefonos>
+  </contacto>
+  <contacto>
+  <nombre> María</nombre> 
+    <apellidos> Pérez Pérez</apellidos> 
+    <correo>  mariaperez@gmail.com</correo>
+    <telefonos>
+      <movil></movil>
+      <fijo></fijo>
+      <trabajo> 638 593 628</trabajo>
+      </telefonos>
+  </contacto>
+  <contacto>
+  <nombre> Jose</nombre> 
+    <apellidos> Martín Martín</apellidos> 
+    <correo>  josemartin@gmail.com</correo>
+    <telefonos>
+      <movil>694 583 958</movil>
+      <fijo></fijo>
+      <trabajo></trabajo>
+      </telefonos>
+  </contacto>
+  <contacto>
+  <nombre> Pepe</nombre> 
+    <apellidos> Díaz Díaz</apellidos> 
+    <correo>  pepediaz@gmail.com</correo>
+    <telefonos>
+      <movil>639 593 284</movil>
+      <fijo></fijo>
+      <trabajo></trabajo>
+      </telefonos>
+  </contacto>
+</agenda>

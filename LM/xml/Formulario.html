@@ -1,0 +1,244 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Mi página </title>
+        <link rel="stylesheet" type="text/css" href="mi.css">
+        <style>
+            #horario{
+                text-align: center;
+                width: 50%;
+                border: 1px solid black;
+                td{
+                    border: 1px solid black;
+                }
+                #programacion{
+                    background-color: lightgreen;
+                }
+
+                #entornos{
+                    background-color: lightcoral;
+                }
+                
+                #basedatos{
+                    background-color: lightgoldenrodyellow;
+                }
+                
+                #ipe{
+                    background-color: lightseagreen;
+                }
+                
+                #lenguaje{
+                    background-color: lightyellow;
+                }
+                
+                #sistemas{
+                    background-color: lightgray;
+                }
+                
+                #digitalizacion{
+                    background-color: rgb(103, 171, 213);
+                }
+                
+                #sostenibilidad{
+                    background-color: whitesmoke;
+                }
+
+            }
+            
+        </style>
+        <script scr="mi.js"></script>
+    </head>
+
+    <div>
+        <img id="medac" src="medac.png" alt="medac" widht="200">
+        <h2>Ejemplo de formulario:Matriculación en DAW</h2>
+    </div>
+
+    <table id="horario">
+        <tr>
+            <td style="background: lightblue;"><b>HORA/DIA</b></td>
+            <td style="background: lightblue;"><b>LUNES</b></td>
+            <td style="background: lightblue;"><b>MARTES</b></td>
+            <td style="background: lightblue;"><b>MIERCOLES</b></td>
+            <td style="background: lightblue;"><b>JUEVES</b></td>
+            <td style="background: lightblue;"><b>VIERNES</b></td>
+        </tr>
+        <tr>
+            <td style="background: lightblue;"><b>15:00-15:30</b></td>
+            <td id="entornos" rowspan="4">ENTORNOS DE DESARROLLO</td>
+            <td id="ipe" rowspan="3">IPE 1</td>
+            <td id="sistemas" rowspan="4">SISTEMAS INFORMÁTICOS</td>
+            <td id="lenguaje" rowspan="3">LENGUAJE DE MARCAS</td>
+            <td id="sostenibilidad" rowspan="2">SOSTENIBILIDAD</td>
+        </tr>
+        <tr>
+            <td style="background: lightblue;"><b>15:30-16:00</b></td>
+        </tr>
+        <tr>
+            <td style="background: lightblue;"><b>16:00-16:30</b></td>
+            <td id="digitalizacion" rowspan="2">DIGITALIZACION</td>
+        </tr>
+        <tr>
+            <td style="background: lightblue;"><b>16:30-17:00</b></td>
+            <td style="background: blue; color: white">DESCANSO</td>
+            <td style="background: blue; color: white">DESCANSO</td>
+        </tr>
+        <tr>
+            <td style="background: lightblue;"><b>17:00-17:30</b></td>
+            <td style="background: blue; color: white">DESCANSO</td>
+            <td id="programacion" rowspan="3">PROGRAMACIÓN</td>
+            <td style="background: blue; color: white">DESCANSO</td>
+            <td id="programacion" rowspan="5">PROGRAMACIÓN</td>
+            <td id="sistemas" rowspan="2">SISTEMAS</td>
+        </tr>
+        <tr>
+            <td style="background: lightblue;"><b>17:30-18:00</b></td>
+            <td id="basedatos" rowspan="4">BASE DATOS</td>
+            <td id="lenguaje" rowspan="3">LENGUAJE DE MARCAS</td>
+        </tr>
+        <tr>
+            <td style="background: lightblue;"><b>18:00-18:30</b></td>
+            <td style="background: blue; color: white">DESCANSO</td>
+        </tr>
+        <tr>
+            <td style="background: lightblue;"><b>18:30-19:00</b></td>
+            <td id="entornos" rowspan="2">ENTORNO DE DESARROLLO</td>
+            <td id="ipe" rowspan="3">IPE 1</td>
+        </tr>
+        <tr>
+            <td style="background: lightblue;"><b>19:00-19:30</b></td>
+            <td id="programacion" rowspan="5">PROGRAMACIÓN</td>
+        </tr>
+        <tr>
+            <td style="background: lightblue;"><b>19:30-20:00</b></td>
+            <td id="sistemas" rowspan="4">SISTEMAS</td>
+            <td id="basedatos" rowspan="4">BASE DATOS</td>
+            <td id="basedatos" rowspan="4">BASE DATOS</td>
+        </tr>
+        <tr>
+            <td style="background: lightblue;"><b>20:00-20:30</b></td>
+            <td id="programacion" rowspan="3">PROGRAMACIÓN</td>
+        </tr>
+        <tr>
+            <td style="background: lightblue;"><b>20:30-21:00</b></td>
+        </tr>
+        <tr>
+            <td style="background: lightblue;"><b>21:00-21:30</b></td>
+        </tr>
+    </table>
+
+    <form action="formulario.php" method="post">
+        <label for="nombre" accesskey="N"><b>Nombre: &nbsp;</b></label>
+        <input type="text" id="nombre" name="nnombre" value="Introduzca Nombre" tabindex="1">
+        <label for="apellidos" accesskey="A"><b>Apellidos: &nbsp;</b></label>
+        <input type="text" id="apellidos" name="aapellidos" value="Introduzca Apellidos" tabindex="2">    
+        <label for="sexo" accesskey="S"><b>Sexo: &nbsp</b></label>
+        <input type="radio" id="H" name="sexo"><b>H</b>
+        <input type="radio" id="M" name="sexo"><b>M</b>
+        <p><b>Fecha de nacimiento </b><select id="dia" name="dia">
+                            <option label="dia" value="dia"></option>
+                            <option label="1" value="1"></option>
+                            <option label="2" value="2"></option>
+                            <option label="3" value="3"></option>
+                            <option label="4" value="4"></option>
+                            <option label="5" value="5"></option>
+                            <option label="6" value="6"></option>
+                            <option label="7" value="7"></option>
+                            <option label="8" value="8"></option>
+                            <option label="9" value="9"></option>
+                            <option label="10" value="10"></option>
+                            <option label="11" value="11"></option>
+                            <option label="12" value="12"></option>
+                            <option label="13" value="13"></option>
+                            <option label="14" value="14"></option>
+                            <option label="15" value="15"></option>
+                            <option label="16" value="16"></option>
+                            <option label="17" value="17"></option>
+                            <option label="18" value="18"></option>
+                            <option label="19" value="19"></option>
+                            <option label="20" value="20"></option>
+                            <option label="21" value="21"></option>
+                            <option label="22" value="22"></option>
+                            <option label="23" value="23"></option>
+                            <option label="24" value="24"></option>
+                            <option label="25" value="25"></option>
+                            <option label="26" value="26"></option>
+                            <option label="27" value="27"></option>
+                            <option label="28" value="28"></option>
+                            <option label="29" value="29"></option>
+                            <option label="30" value="30"></option>
+                            <option label="31" value="31"></option>
+                        </select>
+                        <select id="mes" name="mes">
+                            <option label="mes" value="mes"></option>
+                            <option label="1" value="1"></option>
+                            <option label="2" value="2"></option>
+                            <option label="3" value="3"></option>
+                            <option label="4" value="4"></option>
+                            <option label="5" value="5"></option>
+                            <option label="6" value="6"></option>
+                            <option label="7" value="7"></option>
+                            <option label="8" value="8"></option>
+                            <option label="9" value="9"></option>
+                            <option label="10" value="10"></option>
+                            <option label="11" value="11"></option>
+                            <option label="12" value="12"></option>
+                        </select>
+                        <select id="año" name="año">
+                            <option label="año" value="año"></option>
+                            <option label="2014" value="2014"></option>
+                            <option label="2015" value="2015"></option>
+                            <option label="2016" value="2016"></option>
+                            <option label="2017" value="2017"></option>
+                            <option label="2018" value="2018"></option>
+                            <option label="2019" value="2019"></option>
+                            <option label="2020" value="2020"></option>
+                            <option label="2021" value="2021"></option>
+                            <option label="2022" value="2022"></option>
+                            <option label="2023" value="2023"></option>
+                            <option label="2024" value="2024"></option>
+                            <option label="2025" value="2025"></option>
+                        </select>
+        </p>
+        <p><b>Escoge los módulos en los que te matriculas:</b></p>
+
+        <table>
+            <tr>
+                <td><input type="checkbox" id="selecciona" name="FH"><b>Fundamentos de Hardware</b></td>
+                <td><input type="checkbox" id="selecciona" name="SRI"><b>Servicios de Red e Internet</b></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="selecciona" name="GBD">Gestión de Base de Datos</td>
+                <td><input type="checkbox" id="selecciona" name="ASO">Administración de Sistemas Operativos</td>
+            </tr><tr>
+                <td><input type="checkbox" id="selecciona" name="ISO">Implantación de Sistemas Operativos</td>
+                <td><input type="checkbox" id="selecciona" name="IAW">Implantación de Aplicaciones Web</td>
+            </tr><tr>
+                <td><input type="checkbox" id="selecciona" name="PAD"> Planificación y Administración de Redes</td>
+                <td><input type="checkbox" id="selecciona" name="ASGBD">Administración de Sistemas Gestores de Bases de Datos</td>
+            </tr><tr>
+                <td><input type="checkbox" id="selecciona" name="LMSGI">Lenguajes de Marcas y Sistemas de Gestión de Información</td>
+                <td><input type="checkbox" id="selecciona" name="SAD">Seguridad y Alta Disponibilidades</td>
+            </tr><tr>
+                <td><input type="checkbox" id="selecciona" name="FOL">Formación y Orientación Laboral</td>
+                <td><input type="checkbox" id="selecciona" name="EIE">Empresa e Iniciativa Emprendedora</td>
+            </tr><tr>
+                <td><input type="checkbox" id="selecciona" name="PASIR">Proyecto de Administración de Sistemas Informáticos en Red</td>
+                <td><input type="checkbox" id="selecciona" name="FCT">Formación en Centros de Trabajo</td>
+            </tr>
+        </table>
+
+        <br>
+        <p><b>Estudios previos:</b></p>
+        <hr>
+        <textarea id="previos" name="pprevios" cols="120"></textarea>
+        <p></p>
+        <button name="Consultar" type="">Consultar</button>
+        <input type="reset" value="Reestablecer">
+        <input type="submit" value="Enviar">
+    </form>
+    <p><b>Pulsa el botón de enviar para formalizar la matrícula o el botón de "restablecer" para limpiar el formulario</b></p>
+
+
+</html>

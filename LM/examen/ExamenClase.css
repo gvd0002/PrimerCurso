@@ -1,0 +1,117 @@
+* {
+    width: 90%;
+    margin: auto;
+}
+
+body {
+    position: absolute;
+}
+
+header {
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    width: 100%;
+    background-color:lightblue;
+}
+
+header h1 {
+    position: absolute;
+    background-color:lightblue;
+    top: 10px;
+}
+
+header h2 {
+    position: absolute;
+    background-color:lightblue;
+    top: 50px;
+}
+
+#hr1{
+    position: absolute;
+    top: 100px;
+}
+
+#hr2 {
+    position: absolute;
+    top: 150px;
+}
+
+nav {
+    position: absolute;
+    text-align: center;
+    top: 120px;
+    background-color: rgb(112, 112, 247);
+}
+
+main {
+    position:absolute;
+    top: 150px;
+}
+
+img {
+    position: relative;
+    display: flex;
+    float: right;
+    width: 100px;
+    height: 100px;
+}
+
+section {
+    position: absolute;
+    background-color: brown;
+    top: 10px;
+    left:0;
+    width: 80%;
+}
+
+section h1 {
+    position:absolute;
+    background-color: brown;
+    width: 105%;
+    height: 360px;
+    top: 10px;
+    left: 0;
+}
+
+#articulo2 dt,dd,dl {
+    position: relative;
+}
+
+#articulo1 dt, dd, dl {
+    position: relative;
+}
+
+
+#articulo1 {
+    position:absolute;
+    background-color: beige;
+    top: 50px;
+    left: 0;
+}
+
+#articulo2 {
+    position: absolute;
+    background-color: beige;
+    top: 160px;
+    left: 0;
+}
+
+aside {
+    position: absolute;
+    background-color: blue;
+    top: 20px;
+    right:0;
+    width: 15%;
+    height: 360px;
+}
+
+
+footer {
+    position: absolute;
+    top: 400px;
+    display: flex;
+    float: center;
+    background-color: green;
+    width: 100%;
+}

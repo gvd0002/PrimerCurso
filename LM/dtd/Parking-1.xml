@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--************************************************************************************************************************-->
+<!--Debéis validar este documento teniendo en cuenta las siguientes consideraciones:
+      - El elemento parking debe llevar otro atributo creado por vosotros y, por supuesto, deberéis tenerlo en cuenta en la validación
+      - Dicho atributo será opcional a efectos de la validación
+      - Dentro del elemento vehiculo puede haber un elemento salida 
+      - estado y combustible serán enumeraciones de tres valores
+      - No está permitido usar ANY en los elementos
+      - Habréis de crear una entidad denominada firma con el valor que queráis en el DTD (no aparece en el XML).-->
+<!--************************************************************************************************************************-->
+<!--Realizar DTD interno aquí-->
+<!DOCTYPE parking
+[
+<!ELEMENT parking (zona+, tarifas, avisos)>
+<!ELEMENT zona (plaza+)>
+<!ELEMENT plaza (vehiculo*)>
+<!ELEMENT vehiculo (matricula, entrada, salida?)>
+<!ELEMENT matricula (#PCDATA)>
+<!ELEMENT entrada (#PCDATA)>
+<!ELEMENT salida (#PCDATA)>
+<!ELEMENT tarifas (tarifa+)>
+<!ELEMENT tarifa (#PCDATA)>
+<!ELEMENT avisos (aviso*)>
+<!ELEMENT aviso (#PCDATA)>
+<!ATTLIST parking alumno CDATA #REQUIRED>
+<!ATTLIST parking ciudad CDATA #REQUIRED>
+<!ATTLIST parking localizacion CDATA #IMPLIED>
+<!ATTLIST zona nombre CDATA #REQUIRED>
+<!ATTLIST zona tipo CDATA #REQUIRED>
+<!ATTLIST plaza numero CDATA #REQUIRED>
+<!ATTLIST plaza estado (libre | ocupada | reservada) #REQUIRED>
+<!ATTLIST vehiculo combustible (gasolina | diesel | hibrido) #REQUIRED>
+<!ATTLIST tarifas moneda CDATA #REQUIRED>
+<!ATTLIST aviso prioridad CDATA #REQUIRED>
+<!ATTLIST tarifa tipo CDATA #REQUIRED>
+<!ENTITY firma "HechoPorGonzalo">
+]
+>
+
+<parking alumno="APELLIDO1_APELLIDO2" ciudad="Granada" localizacion="Ganivet">
+  <zona nombre="A" tipo="coche">
+    <plaza numero="A-01" estado="libre"/>
+    <plaza numero="A-02" estado="ocupada">
+      <vehiculo combustible="hibrido">
+        <matricula>1234ABC</matricula>
+        <entrada>08:35</entrada>
+      </vehiculo>
+    </plaza>
+  </zona>
+
+  <zona nombre="M" tipo="moto">
+    <plaza numero="M-10" estado="reservada"/>
+  </zona>
+
+  <tarifas moneda="EUR">
+    <tarifa tipo="coche">1.50</tarifa>
+    <tarifa tipo="moto">1.00</tarifa>
+  </tarifas>
+
+  <avisos>
+    <aviso prioridad="alta">Salida bloqueada por obras</aviso>
+  </avisos>
+</parking>

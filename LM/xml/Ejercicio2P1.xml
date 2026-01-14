@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<itinerario nombre="Gonzalo">
+<!--Cada vuelo tiene atributos con los datos mas importantes-->
+  <vuelo identificador="UC1234" origen="GRX" destino="MAD">
+    <fecha>2024-04-21</fecha>
+    <horaSalida>8:30</horaSalida>
+    <horaLlegada>9:40</horaLlegada>
+    <estado>En hora</estado>
+    <!--Para la informacion de los aviones solo considero relevante poner 
+    como atributos la empresa y modelo-->
+    <avion empresa="Embraer" modelo="E190">
+      <capacidad>110</capacidad>
+    </avion>
+    <!--En esta etiqueta utilizo como atributo el identificador de la licencia-->
+    <piloto licencia="LIC-7420">
+      <nombre>Maria Lopez</nombre>
+    </piloto>
+    <duracion>70</duracion>
+    <observacion></observacion>
+  </vuelo>
+  <vuelo identificador="IB2715" origen="MAD" destino="GRX">
+    <fecha>2024-04-21</fecha>
+    <horaSalida>10:30</horaSalida>
+    <horaLlegada>11:45</horaLlegada>
+    <estado>Retrasado</estado>
+    <avion empresa="Airbus" modelo="A320">
+      <capacidad>180</capacidad>
+    </avion>
+    <piloto licencia="LIC-5521">
+      <nombre>Javier Santos</nombre>
+    </piloto>
+    <duracion>75</duracion>
+    <observacion>Retrado meteo</observacion>
+  </vuelo>
+  <vuelo identificador="VY3021" origen="GRX" destino="BCN">
+    <fecha>2024-05-02</fecha>
+    <horaSalida>7:15</horaSalida>
+    <horaLlegada>8:50</horaLlegada>
+    <estado>En hora</estado>
+    <avion empresa="Airbus" modelo="A319">
+      <capacidad>114</capacidad>
+    </avion>
+    <piloto licencia="LIC-3310">
+      <nombre>Laura Garrido</nombre>
+    </piloto>
+    <duracion>95</duracion>
+    <observacion></observacion>
+  </vuelo>
+  <vuelo identificador="FR8190" origen="BCN" destino="GRX">
+    <fecha>2024-05-02</fecha>
+    <horaSalida>20:10</horaSalida>
+    <horaLlegada>21:45</horaLlegada>
+    <estado>Cancelado</estado>
+    <avion empresa="Boeing" modelo="737-800">
+      <capacidad>189</capacidad>
+    </avion>
+    <piloto licencia="LIC-9981">
+      <nombre>Pedro Navas</nombre>
+    </piloto>
+    <duracion>95</duracion>
+    <observacion>Cancelado por huelga</observacion>
+  </vuelo>
+</itinerario>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="COMUNIDAD" type="tipocomunidad"/>
+<xs:complexType name="tipocomunidad">
+	<xs:sequence>
+		<xs:element name="edificio" type="tipoedificio" minOccurs="1" maxOccurs="unbounded"/>
+	</xs:sequence>
+	<xs:attribute name="calle"  type="tipocalle" use="required"/>
+</xs:complexType>
+<xs:complexType name="tipoedificio">
+	<xs:sequence>
+		<xs:element name="plantas" type="xs:integer"/>
+		<xs:element name="pisos" type="xs:integer"/>
+		<xs:element name="propietarios" type="tipopropietario" minOccurs="0" maxOccurs="unbounded"/>
+	</xs:sequence>
+	<xs:attribute name="número" type="tiponumero" use="required"/>
+</xs:complexType>
+<xs:complexType name="tipopropietario">
+	<xs:sequence>
+		<xs:element name="nombre" type="xs:string"/>
+		<xs:element name="apellidos" type="xs:string"/>
+		<xs:element name="dni" type="tipodni"/>
+		<xs:element name="propiedad" type="xs:string" minOccurs="0"/>
+		<xs:element name="viviendo" minOccurs="0"/>
+	</xs:sequence>
+</xs:complexType>
+<xs:simpleType name="tipocalle">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="Trajano"/>
+		<xs:enumeration value="Recogidas"/>
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="tiponumero">
+	<xs:restriction base="xs:integer">
+		<xs:minInclusive value="1"/>
+		<xs:maxInclusive value="8"/>
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="tipodni">
+	<xs:restriction base="xs:string">
+		<xs:pattern value="\d{8}([A-Z]|[a-z])"/>
+	</xs:restriction>
+</xs:simpleType>
+
+
+
+</xs:schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<COMUNIDAD calle="Trajano"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="comunidadcontiposyrestricciones.xsd">
+	<edificio número="1">
+	   <plantas>5</plantas>
+	   <pisos>9</pisos>
+	   <propietarios>
+	   	<nombre>Luis</nombre>
+	   	<apellidos>Robles</apellidos>
+	   	<dni>12345678A</dni>
+	   	<propiedad>5C</propiedad>   
+	   </propietarios>
+	   <propietarios>
+	   	<nombre>Juan</nombre>
+	   	<apellidos>Sánchez</apellidos>
+	   	<dni>12345678B</dni> 
+	   </propietarios>
+	</edificio>   
+	<edificio número="2">
+	   <plantas>8</plantas>
+	   <pisos>10</pisos>
+	   <propietarios>
+	   	<nombre>Antonio</nombre>
+	   	<apellidos>Cámara</apellidos>
+	   	<dni>12345678C</dni>
+	   	<propiedad>Propietario del piso 5ºC</propiedad>   
+	   	<viviendo/>
+	   </propietarios>
+	   <propietarios>
+	   	<nombre>Iván</nombre>
+	   	<apellidos>Cano</apellidos>
+	   	<dni>12345678D</dni>
+	   	<propiedad>Propietario del piso 2ºC</propiedad>   
+	   </propietarios>
+	</edificio>  
+</COMUNIDAD>

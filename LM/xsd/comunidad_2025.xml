@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <COMUNIDAD calle="Trajano"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-xsi:noNamespaceSchemaLocation="comunidad.xsd">
+xsi:noNamespaceSchemaLocation="comunidadPersonalizado.xsd">
 	<edificio número="1">
 	   <plantas>5</plantas>
 	   <pisos>9</pisos>

@@ -1,0 +1,32 @@
+Vamos a poner dos switchers con VLAN conectados a un switch y a un router
+Desde la línea de comandos del primer switch
+
+Primero enable para encenderlo.
+
+Config t para confirgurarlo
+
+Le ponemos nombre a la VLAN con "VLAN 10" y después "name AULA1"
+
+Ahora "exit" y "interface range f0/1-24"
+
+La vamos a configurar en modo acceso con "switchport mode access" y luego "switchport access vlan 10"
+
+En el otro switch lo mismo
+
+En el switch de unión llamamos las dos vlan que hemos creado y otra más
+
+Desde el puerto de una vlan ponemos "interface f0/1" luego "switchport mode access" y "switchport access vlan 10"
+
+Ahora en vez de poner mode access ponemos "switchport mode trunk" y "switchport trunk native vlan 30"
+
+Ahora en el router le pongo enable y eso y "interface f0/0.10" para hacer subredes
+
+Para encapsular se pone "encapsulation dot1Q 10"
+
+Ahora la dirección ip del router "ip address 192.168.10.1 255.255.255.0" y lo mismo para la vlan 20.
+
+Y ya por último hacemos "interface f0/0" y "no shutdown"
+
+Ponemos los dhcp "ip dhcp excluded-address 192.168.10.2 192.168.10.100" y con la 20 también
+
+Y luego ponemos el router con "ip dhcp pool red10", luego "network 192.168.10.0 255.255.255.0", luego "default-router 192.168.10.1", "dns-server 1.1.1.1"

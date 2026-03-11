@@ -1,0 +1,180 @@
+=========================================
+SWITCH 1 DE AULA 1 
+=========================================
+
+Switch>enable
+Switch#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#VLAN 10
+Switch(config-vlan)#name AULA1
+Switch(config-vlan)#exit
+Switch(config)#interface range f0/1-24
+Switch(config-if-range)#switchport mode access
+Switch(config-if-range)#switchport access vlan 10
+
+=========================================
+SWITCH 2 DE AULA 2 
+=========================================
+
+Switch>enable
+Switch#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#VLAN 20
+Switch(config-vlan)#name AULA2
+Switch(config-vlan)#exit
+Switch(config)#interface range f0/1-24
+Switch(config-if-range)#switchport mode access
+Switch(config-if-range)#switchport access vlan 20
+
+=========================================
+SWITCH 3 DE AULA 3
+=========================================
+
+Switch>enable
+Switch#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#VLAN 30
+Switch(config-vlan)#name AULA3
+Switch(config-vlan)#exit
+Switch(config)#interface range f0/1-24
+Switch(config-if-range)#switchport mode access
+Switch(config-if-range)#switchport access vlan 30
+
+=========================================
+SWITCHPORT 4 DE AULA 4
+=========================================
+
+Switch>enable
+Switch#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#VLAN 40
+Switch(config-vlan)#name AULA4
+Switch(config-vlan)#exit
+Switch(config)#interface range f0/1-24
+Switch(config-if-range)#switchport mode access
+Switch(config-if-range)#switchport access vlan 40
+
+
+=========================================
+CONFIGURACIÓN SWITCH INTERMEDIO	 
+=========================================
+
+
+Switch>enable
+Switch#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#vlan 10
+Switch(config-vlan)#name AULA1
+Switch(config-vlan)#exit
+Switch(config)#vlan 20
+Switch(config-vlan)#name AULA2
+Switch(config-vlan)#exit
+Switch(config)#vlan 30
+Switch(config-vlan)#name AULA3
+Switch(config-vlan)#exit
+Switch(config)#vlan 40
+Switch(config-vlan)#name AULA4
+Switch(config-vlan)#interface f0/1
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 10
+Switch(config-if)#exit
+Switch(config)#interface f0/2
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 20
+Switch(config-if)#exit
+Switch(config)#interface f0/3
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 30
+Switch(config-if)#exit
+Switch(config)#interface f0/4
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 40
+Switch(config-if)#exit
+Switch(config)#vlan 50
+Switch(config-vlan)#name PRINCIPAL
+Switch(config-vlan)#exit
+Switch(config)#interface f0/24
+Switch(config-if)#switchport mode trunk
+Switch(config-if)#switchport trunk vlan 50
+                                   ^
+% Invalid input detected at '^' marker.
+	
+Switch(config-if)#switchport nonegotiate
+Switch(config-if)#switchport native vlan 50
+
+
+=========================================
+CONFIGURACION DEL ROUTER
+=========================================
+Router>enable
+Router#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface f0/0.10
+Router(config-subif)#ip address 192.168.77.1 255.255.255.192
+
+% Configuring IP routing on a LAN subinterface is only allowed if that
+subinterface is already configured as part of an IEEE 802.10, IEEE 802.1Q,
+or ISL vLAN.
+
+Router(config-subif)#encapsulation dot1Q 10
+Router(config-subif)#ip address 192.168.77.1 255.255.255.192
+Router(config-subif)#exit
+Router(config)#interface f0/0.20
+Router(config-subif)#encapsulation dot1Q 20
+Router(config-subif)#ip address 192.168.77.65 255.255.255.224
+Router(config-subif)#exit
+Router(config)#interface f0/0.30
+Router(config-subif)#encapsulation dot1Q 30
+Router(config-subif)#ip address 192.168.77.97 255.255.255.240
+Router(config-subif)#exit
+Router(config)#interface f0/0.40
+Router(config-subif)#encapsul
+Router(config-subif)#encapsulation dot1Q 40
+Router(config-subif)#ip address 192.168.77.113 255.255.255.248
+Router(config-subif)#exit
+Router(config)#interface f0/0
+Router(config-if)#no shutdown
+
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up
+
+%LINK-5-CHANGED: Interface FastEthernet0/0.10, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0.10, changed state to up
+
+%LINK-5-CHANGED: Interface FastEthernet0/0.20, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0.20, changed state to up
+
+%LINK-5-CHANGED: Interface FastEthernet0/0.30, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0.30, changed state to up
+
+%LINK-5-CHANGED: Interface FastEthernet0/0.40, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0.40, changed state to up
+Router(config)#ip dhcp pool red10
+Router(dhcp-config)#network 192.168.77.0 255.255.255.192
+Router(dhcp-config)#default-router 192.168.77.1
+Router(dhcp-config)#dns-server 1.1.1.1
+Router(dhcp-config)#exit
+Router(config)#ip dhcp pool red20
+Router(dhcp-config)#network 192.168.77.64 255.255.255.224
+Router(dhcp-config)#default-router 192.168.77.65
+Router(dhcp-config)#dns-server 1.1.1.1
+Router(dhcp-config)#exit
+Router(config)#ip dhcp pool red30
+Router(dhcp-config)#network 192.168.77.96 255.255.255.240
+Router(dhcp-config)#default-router 192.168.77.97
+Router(dhcp-config)#
+Router(dhcp-config)#dns-server 1.1.1.1
+Router(dhcp-config)#exit
+Router(config)#ip dhcp pool red40
+Router(dhcp-config)#network 192.168.77.112 255.255.255.248
+Router(dhcp-config)#default-router 192.168.77.113
+Router(dhcp-config)#dns-server 1.1.1.1
+Router(dhcp-config)#exit
+Router(config)#%DHCPD-4-PING_CONFLICT: DHCP address conflict:  server pinged 192.168.77.1.
+%DHCPD-4-PING_CONFLICT: DHCP address conflict:  server pinged 192.168.77.97.

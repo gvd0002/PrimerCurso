@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<inventario centro="MEDAC"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="inventario22.xsd">
+<ordenador>
+	<tipo>sobremesa</tipo>
+	<localizacion>oficina-2-2</localizacion>
+	<procesador fabricante="intel">I3</procesador>
+	<memoria unidad="GB">4</memoria>
+	<hd tipo="SCSI" unidad="TB">2</hd>
+	<conexiones>
+	</conexiones>
+</ordenador>
+<ordenador>
+	<tipo>portátil</tipo>
+	<localizacion>oficina-3-2</localizacion>
+	<procesador fabricante="intel">I5</procesador>
+	<memoria unidad="GB">8</memoria>
+	<hd tipo="sata" unidad="TB">1</hd>
+	<conexiones>
+	</conexiones>
+</ordenador>
+</inventario>

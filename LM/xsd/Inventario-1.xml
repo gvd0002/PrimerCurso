@@ -1,0 +1,54 @@
+﻿<!--Realizar las siguientes consultas xpath:
+1. Precio del primer elemento respecto al total
+concat("El primer precio respecto del total es: ",//ordenador[1]/precio div sum(//precio))
+2. Año de revisión del PC-001
+concat("Año de la revisión del ordenador PC-001: ",substring(//ordenador[@id="PC-001"]/mantenimiento/ultimaRevision/text(),1,4))
+3. Cuantas incidencias hay
+concat("Hay en total: ", count(//incidencia), " incidencias")
+4. Suma total de precios con texto introductorio.
+concat("Los precios totales son: ", sum(//precio))
+5. La marca del último ordenador
+concat("El ultimo ordenador es un ", //ordenador[last()]/marca/text())
+6. Señalar id del ordenador con más de 8GB
+concat("El ordenador con más de 8 GB es el ", //ordenador[memoria > 8]/@id)
+.-->
+
+<inventario aula="A-12">
+
+  <ordenador id="PC-001">
+    <tipo>sobremesa</tipo>
+    <marca>Dell</marca>
+    <modelo>OptiPlex 7090</modelo>
+    <sistema>Windows 11</sistema>
+    <localizacion>oficina-1-11</localizacion>
+    <precio>799.99</precio>
+    <memoria unidad="GB">16</memoria>
+    <proveedor cif="B12345678">
+      <nombre>Informática Sur</nombre>
+      <telefono>958111222</telefono>
+    </proveedor>
+    <mantenimiento>
+      <ultimaRevision>2025-12-15</ultimaRevision>
+      <incidencia>Cambio de ventilador</incidencia>
+    </mantenimiento>
+  </ordenador>
+
+  <ordenador id="PC-002">
+    <tipo>portatil</tipo>
+    <marca>HP</marca>
+    <modelo>ProBook 450</modelo>
+    <sistema>Windows 10</sistema>
+    <localizacion>oficina-3-08</localizacion>
+    <precio>1099.00</precio>
+    <memoria unidad="GB">8</memoria>
+    <proveedor cif="B87654321">
+      <nombre>TecnoGranada</nombre>
+    </proveedor>
+    <mantenimiento>
+      <ultimaRevision>2026-01-10</ultimaRevision>
+      <incidencia>Actualización de BIOS</incidencia>
+      <incidencia>Pantalla parpadea</incidencia>
+    </mantenimiento>
+  </ordenador>
+
+</inventario>

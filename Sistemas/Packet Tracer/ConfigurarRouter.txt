@@ -1,0 +1,25 @@
+Primer habilitamos el router con "enable".
+
+Después "config t".
+
+Vamos a configurar la interfaz que he conectado, en este caso la 0/0 con el comando: "interface f0/0".
+
+Para poner las ip's vamos a usar "ip address 192.168.0.1 255.255.255.0".
+
+Para encenderlo pongo un comando que es, no te apagues, "no shutdown". 
+
+Con "exit" salgo de la configuración de esa interfaz en concreto.
+
+Ahora vamos a configurar el dhcp con "ip dhcp pool <nombre>".
+
+Ahora ponemos "network 192.168.0.0 255.255.255.0" que es la dirección de red y se pone también la máscara
+
+Después se pone "default-router 192.168.0.1" para asignarle la puerta de enlace (el router que tenemos)
+
+Y ahora le ponemos el servidor DNS con "dns-server 1.1.1.1" con algún servidor dns que queramos nosotros.
+
+Ahora cuando entre en un dispositivo y le ponga la ip-config en dhcp, se le asignará automáticamente una dirección ip con la máscara, puerta de enlace (router) y el servidor dns.
+
+Para reservar ciertas direcciones ip's para ponerlas fijas:
+
+Se usa "ip dhcp excluded-address 192.168.0.1 192.168.0.50" y se pone un rango de valores a excluir.

@@ -1,0 +1,17 @@
+Cuantas comunidades hay: count(//comunidad)
+
+De que país son los datos: //país/@nombre
+
+Cuantas mujeres viven en Andalucía: //comunidad[@nombre="Andalucía"]/mujeres
+
+Cuantos hombres y mujeres viven en Bilbao: //comunidad[@nombre="Pais Vasco"]/mujeres | //comunidad[@nombre="Pais Vasco"]/hombres
+
+Que población total tiene España: sum(//población)
+
+Que comunidad tiene mayor población: 
+
+Que comunidad es la antepenúltima del fichero: //comunidad[count(//comunidad)-2]/@nombre
+
+Nombre de la comunidad junto con su población con más de 3 millones de personas: //comunidad[poblacion>3000000]/@nombre | //comunidad[poblacion>3000000]/población
+
+Dos primeras letras de la tercera comunidad: //comunidad[3]/substring(@nombre,1,2)

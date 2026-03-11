@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Reglas para realizar el XSD:
+	- tipo solo puede ser sobremesa o portatil.
+	- memoria debe ser ≥ 1.
+	- precio debe ser > 0.
+-->
+<inventario
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="pruebainventario-1.xsd"
+  aula="A-12">
+
+  <ordenador id="PC-001">
+    <tipo>sobremesa</tipo>
+    <marca>Dell</marca>
+    <modelo>OptiPlex 7090</modelo>
+    <sistema>Windows 11</sistema>
+    <localizacion>oficina-1-11</localizacion>
+    <precio>799.99</precio>
+    <memoria unidad="GB">16</memoria>
+    <proveedor cif="B12345678">
+      <nombre>Informática Sur</nombre>
+      <telefono>958111222</telefono>
+    </proveedor>
+    <mantenimiento>
+      <ultimaRevision>2025-12-15</ultimaRevision>
+      <incidencia>Cambio de ventilador</incidencia>
+    </mantenimiento>
+  </ordenador>
+
+  <ordenador id="PC-002">
+    <tipo>portatil</tipo>
+    <marca>HP</marca>
+    <modelo>ProBook 450</modelo>
+    <sistema>Windows 10</sistema>
+    <localizacion>oficina-3-08</localizacion>
+    <precio>1099.00</precio>
+    <memoria unidad="GB">8</memoria>
+    <proveedor cif="B87654321">
+      <nombre>TecnoGranada</nombre>
+    </proveedor>
+    <mantenimiento>
+      <ultimaRevision>2026-01-10</ultimaRevision>
+      <incidencia>Actualización de BIOS</incidencia>
+      <incidencia>Pantalla parpadea</incidencia>
+    </mantenimiento>
+  </ordenador>
+
+</inventario>

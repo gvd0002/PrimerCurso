@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="inventario" type="tipoInventario"/>
+
+<xs:complexType name="tipoInventario">
+	<xs:sequence>
+		<xs:element name="ordenador" type="tipoOrdenador" minOccurs="1" maxOccurs="unbounded"/>
+	</xs:sequence>
+	<xs:attribute name="aula" type="xs:string" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="tipoOrdenador">
+	<xs:sequence>
+		<xs:element name="tipo" type="tipoTipo"/>
+		<xs:element name="marca" type="xs:string"/>
+		<xs:element name="modelo" type="xs:string"/>
+		<xs:element name="sistema" type="xs:string"/>
+		<xs:element name="localizacion" type="xs:string"/>
+		<xs:element name="precio" type="tipoPrecio"/>
+		<xs:element name="memoria" type="tipoMemoria"/>
+		<xs:element name="proveedor" type="tipoProveedor"/>
+		<xs:element name="mantenimiento" type="tipoMantenimiento"/>	
+	</xs:sequence>
+	<xs:attribute name="id" type="xs:string" use="required"/>
+</xs:complexType>
+
+<xs:simpleType name="tipoTipo">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="sobremesa"/>
+		<xs:enumeration value="portatil"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tipoPrecio">
+	<xs:restriction base="xs:double">
+		<xs:minExclusive value="0"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="tipoMemoria">
+	<xs:simpleContent>
+		<xs:extension base="tipoMemoriaNumero">
+			<xs:attribute name="unidad" type="xs:string" use="required"/>
+		</xs:extension>
+	</xs:simpleContent>
+</xs:complexType>
+
+<xs:simpleType name="tipoMemoriaNumero">
+	<xs:restriction base="xs:integer">
+		<xs:minInclusive value="1"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="tipoProveedor">
+	<xs:sequence>
+		<xs:element name="nombre" type="xs:string"/>
+		<xs:element name="telefono" type="xs:string" minOccurs="0" maxOccurs="2"/>
+	</xs:sequence>
+	<xs:attribute name="cif" type="xs:string" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="tipoMantenimiento">
+	<xs:sequence>
+		<xs:element name="ultimaRevision" type="xs:date"/>
+		<xs:element name="incidencia" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+	</xs:sequence>
+</xs:complexType>
+
+</xs:schema>

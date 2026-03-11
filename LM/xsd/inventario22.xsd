@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="inventario" type="tipoInventario"/>
+<xs:complexType name="tipoInventario">
+	<xs:sequence>
+		<xs:element name="ordenador" type="tipoOrdenador" minOccurs="1" maxOccurs="unbounded"/>
+	</xs:sequence>
+	<xs:attribute name="centro" type="xs:string" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="tipoOrdenador">
+	<xs:sequence>
+		<xs:element name="tipo" type="tipoTipo"/>
+		<xs:element name="localizacion" type="tipoLocalizacion"/>
+		<xs:element name="procesador" type="tipoProcesador"/>
+		<xs:element name="memoria" type="tipoMemoria"/>
+		<xs:element name="hd" type="tipoHd"/>
+		<xs:element name="conexiones"/>
+	</xs:sequence>
+</xs:complexType>
+<xs:simpleType name="tipoTipo">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="sobremesa"/>
+		<xs:enumeration value="portátil"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tipoLocalizacion">
+	<xs:restriction base="xs:string">
+		<xs:pattern value="[a-zA-Z]{7}-[1-9]-[1-9]"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="tipoProcesador">
+	<xs:simpleContent>
+		<xs:extension base="xs:string">
+			<xs:attribute name="fabricante" type="xs:string" use="required"/>
+		</xs:extension>
+	</xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="tipoMemoria">
+	<xs:simpleContent>
+		<xs:extension base="xs:string">
+			<xs:attribute name="unidad" type="xs:string" use="required"/>
+		</xs:extension>
+	</xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="tipoHd">
+	<xs:simpleContent>
+		<xs:extension base="xs:int">
+			<xs:attribute name="tipo" type="xs:string" use="required"/>
+			<xs:attribute name="unidad" type="xs:string" use="required"/>
+		</xs:extension>
+	</xs:simpleContent>
+</xs:complexType>
+
+</xs:schema>
